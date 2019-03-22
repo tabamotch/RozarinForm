@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RozarinForm", "RozarinForm\RozarinForm.csproj", "{76E666D0-C58E-4458-847E-1259CF51DDA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76E666D0-C58E-4458-847E-1259CF51DDA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E666D0-C58E-4458-847E-1259CF51DDA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E666D0-C58E-4458-847E-1259CF51DDA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E666D0-C58E-4458-847E-1259CF51DDA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53B144B1-C9DD-41DA-8134-800133D8828D}
+	EndGlobalSection
+EndGlobal
