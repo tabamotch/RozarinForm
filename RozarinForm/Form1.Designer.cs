@@ -38,6 +38,9 @@
             this.methodNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.methodCallingTreeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.filterTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.doubleBufferedDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.methodCallingTreeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -109,12 +112,12 @@
             this.methodNameDataGridViewTextBoxColumn,
             this.linesDataGridViewTextBoxColumn});
             this.doubleBufferedDataGridView1.DataSource = this.methodCallingTreeBindingSource;
-            this.doubleBufferedDataGridView1.Location = new System.Drawing.Point(12, 68);
+            this.doubleBufferedDataGridView1.Location = new System.Drawing.Point(12, 97);
             this.doubleBufferedDataGridView1.Name = "doubleBufferedDataGridView1";
             this.doubleBufferedDataGridView1.ReadOnly = true;
             this.doubleBufferedDataGridView1.RowTemplate.Height = 21;
             this.doubleBufferedDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.doubleBufferedDataGridView1.Size = new System.Drawing.Size(776, 341);
+            this.doubleBufferedDataGridView1.Size = new System.Drawing.Size(776, 312);
             this.doubleBufferedDataGridView1.TabIndex = 6;
             this.doubleBufferedDataGridView1.SelectionChanged += new System.EventHandler(this.doubleBufferedDataGridView1_SelectionChanged);
             // 
@@ -138,11 +141,41 @@
             // 
             this.methodCallingTreeBindingSource.DataSource = typeof(RozarinForm.MethodCallingTree);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 12);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "フィルタ";
+            // 
+            // filterTextBox
+            // 
+            this.filterTextBox.Location = new System.Drawing.Point(56, 70);
+            this.filterTextBox.Name = "filterTextBox";
+            this.filterTextBox.Size = new System.Drawing.Size(691, 19);
+            this.filterTextBox.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(753, 68);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Go";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.filterTextBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.doubleBufferedDataGridView1);
             this.Controls.Add(this.treeOutputButton);
             this.Controls.Add(this.kaisekiButton);
@@ -169,6 +202,9 @@
         private DoubleBufferedDataGridView doubleBufferedDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn methodNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn linesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox filterTextBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 

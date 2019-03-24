@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Text.RegularExpressions;
+
 namespace RozarinForm
 {
     public partial class Form1 : Form
@@ -220,6 +222,31 @@ namespace RozarinForm
             }
 
             return result;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<MethodCallingTree> tmpList;
+            MethodCallingTree selected = (MethodCallingTree)(doubleBufferedDataGridView1.SelectedRows[0].DataBoundItem);
+
+            tmpList = _tree.Values.ToList();
+            if(!string.IsNullOrEmpty(filterTextBox.Text))
+            {
+                Regex regex;
+                try
+                {
+                    regex = new Regex(filterTextBox.Text, RegexOptions.Compiled);
+                }
+                catch(ArgumentException)
+                {
+                    ShowWarningMessage("フィルターd文字列の解析に失敗しました。正規表現で入力してください。");
+                    return;
+                }
+
+                tmpList = tmpList.Where(tr => regex.IsMatch(tr.MethodName)).ToList();
+            }
+
+            doubleBufferedDataGridView1.DataSource = tmpList;
         }
     }
 }
